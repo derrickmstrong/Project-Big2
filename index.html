@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    
+    <script src="js/scripts.js" defer></script>
+    <title>BIG II - JS Piano App</title>
+  </head>
+  <body>
+    <div class="title">Big II</div>
+    
+    <!-- Start Modal component -->
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary mb-5 instruction-btn"
+  data-toggle="modal"
+  data-target="#instructions"
+>
+   Play Instructions
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade "
+  id="instructions"
+  tabindex="-1"
+  aria-labelledby="instructionsLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="instructionsLabel">Play Instructions</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="piano-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+ <p><div class="btn btn-primary">Option 1</div> Play by touching/hovering
+              the keys</p> 
+              <p><div class="btn btn-primary">Option 2</div> Play by using your keyboard (see below)</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <p>Keyboard Key</p>
+                        <hr />
+                        <p>z</p>
+                        <p>s</p>
+                        <p>x</p>
+                        <p>d</p>
+                        <p>c</p>
+                        <p>v</p>
+                        <p>g</p>
+                        <p>b</p>
+                        <p>h</p>
+                        <p>n</p>
+                        <p>j</p>
+                        <p>m</p>
+                        <p>,</p>
+                    </div>
+                    <div class="col text-center">
+                        <p>Piano Key</p>
+                        <hr />
+                        <p>C</p>
+                        <p>Db/C#</p>
+                        <p>D</p>
+                        <p>Eb/D#</p>
+                        <p>E</p>
+                        <p>F</p>
+                        <p>Gb/F#</p>
+                        <p>G</p>
+                        <p>Ab/G#</p>
+                        <p>A</p>
+                        <p>Bb/A#</p>
+                        <p>B</p>
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+
+           
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal component -->
+</div>
+
+    <div class="warning">
+      In order to enjoy this app, please play on a device 775px wide or larger.
+    </div>
+
+    <div class="piano">
+      <div data-note="C" class="key white note">C</div>
+      <div data-note="Csharp" class="key black note">Db<br />C#</div>
+      <div data-note="D" class="key white note">D</div>
+      <div data-note="Dsharp" class="key black note">Eb<br />D#</div>
+      <div data-note="E" class="key white note">E</div>
+      <div data-note="F" class="key white note">F</div>
+      <div data-note="Fsharp" class="key black note">Gb<br />F#</div>
+      <div data-note="G" class="key white note">G</div>
+      <div data-note="Gsharp" class="key black note">Ab<br />G#</div>
+      <div data-note="A" class="key white note">A</div>
+      <div data-note="Asharp" class="key black note">Bb<br />A#</div>
+      <div data-note="B" class="key white note">B</div>
+      <div data-note="C4" class="key white note">C</div>
+    </div>
+
+    
+    <audio id="C" src="audio/C.mp3"></audio>
+    <audio id="Csharp" src="audio/Csharp.mp3"></audio>
+    <audio id="D" src="audio/D.mp3"></audio>
+    <audio id="Dsharp" src="audio/Dsharp.mp3"></audio>
+    <audio id="E" src="audio/E.mp3"></audio>
+    <audio id="F" src="audio/F.mp3"></audio>
+    <audio id="Fsharp" src="audio/Fsharp.mp3"></audio>
+    <audio id="G" src="audio/G.mp3"></audio>
+    <audio id="Gsharp" src="audio/Gsharp.mp3"></audio>
+    <audio id="A" src="audio/A.mp3"></audio>
+    <audio id="Asharp" src="audio/Asharp.mp3"></audio>
+    <audio id="B" src="audio/B.mp3"></audio>
+    <audio id="C4" src="audio/C4.mp3"></audio>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
